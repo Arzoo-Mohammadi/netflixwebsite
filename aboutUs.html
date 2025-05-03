@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="image/icon/netflix-symbol-black.png" />
+    <title>Netflix Website Project | About-Us Page | | Welcome to your personal cinema universe-Stream the best movies and shows anytime, anywhere.</title>
+    <!--✅ Bootstrap | Link  -->
+    <link rel="stylesheet" href="bootstrap/bootstrap/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="bootstrap/bootstrap-icons/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+    crossorigin="anonymous"
+  />
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!--✅ CSS | Link-->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/aboutUs.css">
+    
+
+    <!--✅ aos | Link -->
+    <link rel="stylesheet" href="aos/aos.css" />
+
+    <!--✅ Boxicons | Link:Icon -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!--✅ FontFamily | Link:Gogglefonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-------------------------------------------------START------------------------------------------->
+    <!-- 🔴Header🔴 -->
+    <nav class="navbar fixed-top">
+      <div class="container-fluid ">
+        <a href="#" class="navbar-brand "
+          ><img src="image/logo/logo.png" alt="" class="LOGO"
+        /></a>
+         <div>
+          <!-- Menu Button -->
+        <button
+          class="navbar-toggler float-sm-end"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasDarkNavbar"
+          aria-controls="offcanvasDarkNavbar"
+          aria-label="Toggle navigation"
+        >
+          <i class="icon-toggle bi bi-list"></i>
+        </button>
+        <!-- Sign-In Button -->
+        <button
+        type="button"
+        class="btn sign-in "
+        data-bs-toggle="modal"
+        data-bs-target="#signInModal"
+      >
+        Sign In
+      </button>
+         </div>
+       
+        <!-- MENU-SLIDER & Offcanvance -->
+        <div
+          class="offcanvas offcanvas-end"
+          tabindex="-1"
+          id="offcanvasDarkNavbar"
+          aria-labelledby="offcanvasDarkNavbarLabel"
+          style="transition: 1s"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">
+              <img
+                src="image/logo.png"
+                alt=""
+                class="LOGO"
+                style="margin-top: 20px"
+              />
+            </h5>
+            <button
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+              style="
+                margin-top: 30px;
+                margin-right: 20px;
+                background-color: transparent;
+                border: none;
+              "
+              class="close-btn"
+            >
+              <i class="bi bi-x-octagon"></i>
+            </button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-5">
+              <li class="nav-item itemDesign">
+                <a href="index.html" aria-current="page">Home</a>
+              </li>
+              <li class="nav-item itemDesign">
+                <a href="#" aria-current="page">About</a>
+              </li>
+              <li class="nav-item itemDesign">
+                <a href="index.html#trending-section" aria-current="page">Trending Movie</a>
+              </li>
+              <li class="nav-item itemDesign">
+                <a href="index.html#new-on-netflix" aria-current="page">New On Netflix</a>
+              </li>
+              <li class="nav-item itemDesign">
+                <a href="index.html#Question" aria-current="page">Questions</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  href="#"
+                  class="dropdown-toggle "
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  style="color: white; text-decoration: none;"
+                  >Our Blogs</a
+                >
+                <ul class="dropdown-menu "  >
+                  <li>
+                    <a href="index.html#top-10" class="dropdown-item">Top-10</a>
+                  </li>
+                  <li><a href="index.html" class="dropdown-item">Popular Movies</a></li>
+
+                  <li>
+                    <hr class="dropdown-divider" />
+                  </li>
+                  <li>
+                    <a href="index.html#popular" class="dropdown-item">Something else</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <form class="d-flex mt-3" role="search">
+              <input
+                class="form-control me-2 srch"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-danger " type="submit">
+                <i class="bi bi-search"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- Sign-In Modal -->
+    <div
+      class="modal fade  "
+      id="signInModal"
+      tabindex="-1"
+      aria-labelledby="signInModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" style="box-shadow: 0px 0px 6px #b50606; border-radius: 10px; width: 400px;">
+        <div class="modal-content" style="background-color: black; ">
+          <div class="modal-header">
+            <h5 class="modal-title" id="signInModalLabel" style=" color: #b50606;">Sign In</h5>
+            <button
+              type="button"
+              class="btn-close btn-danger"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body  " style="background-color: rgba(0, 0, 0, 0.947);" >
+            <form>
+              <div class="mb-3">
+                <label for="email" class="form-label " style="color: rgb(255, 255, 255)"
+                  >Email address</label
+                >
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  style="background-color: transparent; "
+                />
+              </div>
+              <div class="mb-3">
+                <label for="password" class="form-label" style="color: rgb(255, 255, 255)"
+                  >Password</label
+                >
+                <input
+                  type="password"
+                  class="form-control"
+                  id="password"
+                  style="background-color: transparent; "
+                />
+              </div>
+              <button type="submit" class="btn  w-50 text-white" style="background-color: #880202; margin-left: 101px; ">
+                Sign In
+              </button>
+            </form><br>
+            <h2 class="fs-4 fw-bold mb-3 text-white" style="color: rgb(255, 255, 255); padding-left: 90px; font-family:Cormorant Garamond ; ">Or use a third-party</h2>
+          <button class="w-100 py-2 mb-2 btn btn-outline-dark rounded-3 " type="submit">
+            <svg xmlns="http://www.w3.org/2000/svg" style="color: rgb(255, 255, 255);" width="16" height="16" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
+              <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
+            </svg>
+            Sign up with Twitter
+          </button>
+          <button class="w-100 py-2 mb-2 btn btn-outline-primary rounded-3" type="submit">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+              <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+            </svg>
+            Sign up with Facebook
+          </button>
+          <button class="w-100 py-2 mb-2 btn btn-outline-secondary rounded-3" type="submit">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+              <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
+            </svg>
+            Sign up with GitHub
+          </button>
+        </form>
+      </div>
+          </div>
+        </div>
+      </div>
+    </div> 
+    <section class="about-us-main">
+      <h1 data-aos="fade-down" data-aos-delay="300" data-aos-duration="1000">We are here to <br>
+        entertain the world,<br>
+        one fan at a time.</h1> <br><br>
+        <div class="slider">
+            <div class="slide-track">
+              <!-- 1 -->
+              <div class="slide ">
+                <img src="/assets/image/AboutUS-Slider/img1.jpg" alt="" />
+              </div>
+              <!-- 2 -->
+              <div class="slide">
+                <img src="/assets/image/AboutUS-Slider/img2.jpg" alt="" />
+              </div>
+              <!-- 3 -->
+              <div class="slide">
+                <img src="/assets/image/AboutUS-Slider/img3.jpg" alt="" />
+              </div>
+              <!-- 4 -->
+              <div class="slide">
+                <img src="/assets/image/AboutUS-Slider/img4.jpg" alt="" />
+              </div>
+              <!-- 5 -->
+              <div class="slide">
+                <img src="/assets/image/AboutUS-Slider/img5.jpg" alt="" />
+              </div>
+              <!-- 6 -->
+              <div class="slide">
+                <img src="/assets/image/AboutUS-Slider/img6.jpg" alt="" />
+              </div>
+              <!-- 7 -->
+              <div class="slide">
+                <img src="/assets/image/AboutUS-Slider/img7.jpg" alt="" />
+              </div>
+              <!-- 8 -->
+              <div class="slide">
+                <img src="/assets/image/AboutUS-Slider/img8.jpg" alt="" />
+              </div>
+              <!-- 9 -->
+              <div class="slide">
+                <img src="/assets/image/AboutUS-Slider/img9.jpg" alt="" />
+              </div>
+              <!-- 10 -->
+              <div class="slide">
+                <img src="/assets/image/AboutUS-Slider/img10.jpg" alt="" />
+              </div>
+      
+              <!-- 11 -->
+              <div class="slide">
+                <img src="/assets/image/AboutUS-Slider/img11.jpg" alt="" />
+              </div>
+              <!-- 12 -->
+              <div class="slide">
+                <img src="/assets/image/AboutUS-Slider/img12.jpg" alt="" />
+              </div>
+              <!-- 13 -->
+              <div class="slide">
+                <img src="/assets/image/AboutUS-Slider/img1.jpg" alt="" />
+              </div>
+              <!-- 14 -->
+              <div class="slide">
+                <img src="/assets/image/AboutUS-Slider/img3.jpg" alt="" />
+              </div>
+              <!-- 15 -->
+              <div class="slide">
+                <img src="/assets/image/AboutUS-Slider/img5.jpg" alt="" />
+              </div>
+              <!-- 16 -->
+              <div class="slide">
+                <img src="/assets/image/AboutUS-Slider/img9.jpg" alt="" />
+              </div>
+              <!-- 17 -->
+              <div class="slide">
+                <img src="/assets/image/AboutUS-Slider/img8.jpg" alt="" />
+              </div>
+              <!-- 18 -->
+              <div class="slide">
+                <img src="/assets/image/AboutUS-Slider/img11.jpg" alt="" />
+              </div>
+              <!-- 19 -->
+              <div class="slide">
+                <img src="/assets/image/AboutUS-Slider/img12.jpg" alt="" />
+              </div>
+              <!-- 20 -->
+              <div class="slide">
+                <img src="/assets/image/AboutUS-Slider/img5.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+          
+          <!-- pt2 ----------------------------------------------------------------------->
+          <div class="slider2">
+            <div class="slide-track2">
+              <!-- 1 -->
+              <div class="slide2 ">
+                <img src="/assets/image/AboutUS-Slider/img10.jpg" alt="" />
+              </div>
+              <!-- 2 -->
+              <div class="slide2">
+                <img src="/assets/image/AboutUS-Slider/img12.jpg" alt="" />
+              </div>
+              <!-- 3 -->
+              <div class="slide2">
+                <img src="/assets/image/AboutUS-Slider/img6.jpg" alt="" />
+              </div>
+              <!-- 4 -->
+              <div class="slide2">
+                <img src="/assets/image/AboutUS-Slider/img9.jpg" alt="" />
+              </div>
+              <!-- 5 -->
+              <div class="slide2">
+                <img src="/assets/image/AboutUS-Slider/img2.jpg" alt="" />
+              </div>
+              <!-- 6 -->
+              <div class="slide2">
+                <img src="/assets/image/AboutUS-Slider/img5.jpg" alt="" />
+              </div>
+              <!-- 7 -->
+              <div class="slide2">
+                <img src="/assets/image/AboutUS-Slider/img12.jpg" alt="" />
+              </div>
+              <!-- 8 -->
+              <div class="slide2">
+                <img src="/assets/image/AboutUS-Slider/img3.jpg" alt="" />
+              </div>
+              <!-- 9 -->
+              <div class="slide2">
+                <img src="/assets/image/AboutUS-Slider/img1.jpg" alt="" />
+              </div>
+              <!-- 10 -->
+              <div class="slide2">
+                <img src="/assets/image/AboutUS-Slider/img5.jpg" alt="" />
+              </div>
+      
+              <!-- 11 -->
+              <div class="slide2">
+                <img src="/assets/image/AboutUS-Slider/img7.jpg" alt="" />
+              </div>
+              <!-- 12 -->
+              <div class="slide2">
+                <img src="/assets/image/AboutUS-Slider/img3.jpg" alt="" />
+              </div>
+              <!-- 13 -->
+              <div class="slide2">
+                <img src="/assets/image/AboutUS-Slider/img12.jpg" alt="" />
+              </div>
+              <!-- 14 -->
+              <div class="slide2">
+                <img src="/assets/image/AboutUS-Slider/img3.jpg" alt="" />
+              </div>
+              <!-- 15 -->
+              <div class="slide2">
+                <img src="/assets/image/AboutUS-Slider/img5.jpg" alt="" />
+              </div>
+              <!-- 16 -->
+              <div class="slide2">
+                <img src="/assets/image/AboutUS-Slider/img9.jpg" alt="" />
+              </div>
+              <!-- 17 -->
+              <div class="slide2">
+                <img src="/assets/image/AboutUS-Slider/img8.jpg" alt="" />
+              </div>
+              <!-- 18 -->
+              <div class="slide2">
+                <img src="/assets/image/AboutUS-Slider/img11.jpg" alt="" />
+              </div>
+              <!-- 19 -->
+              <div class="slide2">
+                <img src="/assets/image/AboutUS-Slider/img12.jpg" alt="" />
+              </div>
+              <!-- 20 -->
+              <div class="slide2">
+                <img src="/assets/image/AboutUS-Slider/img5.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+          <!-- Section @2____=== -->
+           <div class="section-text2">
+            <h1 data-aos="fade-down" data-aos-delay="300" data-aos-duration="1000"> <br> Thrilling everyone <br>
+              again and again.</h1>
+              <p data-aos="fade-down" data-aos-delay="500" data-aos-duration="1000" class="px-4"><br> Whatever you’re into, whatever your mood, Netflix delivers the next series, <br> films and games you’ll obsess over. This is entertainment the world never  <br> sees coming – and can’t stop talking about.</p>
+          
+            </div>
+          <!-- Section @2____=== -->
+          <h1 data-aos="fade-down" data-aos-delay="500" data-aos-duration="1000"><br> We do this through: </h1>
+          <div class="section-text-png">
+            <!-- Block 1: Reach -->
+            <div class="content-row">
+              <div class="image-slide-about">
+                <img data-aos="fade-right" data-aos-delay="300" data-aos-duration="1000" src="image/AboutUS-Slider/Netflix-About_REACH_Alpha.png" alt="">
+              </div>
+              <div class="text-side"
+              data-aos="fade-left" data-aos-delay="300" data-aos-duration="1000" >
+                <h3>Reach</h3>
+                <p>We are entertaining over half a billion people in more than <br> 190 countries and 50  languages, programmed for just about every <br> taste and culture.</p>
+              </div>
+            </div>
+          
+            <!-- Block 2: Recommendations -->
+            <div class="content-row">
+              <div class="image-slide-about">
+                <img data-aos="fade-right" data-aos-delay="300" data-aos-duration="1000" src="image/AboutUS-Slider/Netflix-About_RECOMMENDATIONS.png" alt="">
+              </div>
+              <div class="text-side"   data-aos="fade-left" data-aos-delay="300" data-aos-duration="1000" >
+                <h3>Recommendations</h3>
+                <p>To help you discover something great every time, no matter what <br> you’re looking for.</p>
+              </div>
+            </div>
+          
+            <!-- Block 3: Fandom -->
+            <div class="content-row">
+              <div class="image-slide-about">
+                <img data-aos="fade-right" data-aos-delay="300" data-aos-duration="1000" src="image/AboutUS-Slider/Netflix-About_FANDOM_.png" alt="">
+              </div>
+              <div class="text-side"   data-aos="fade-left" data-aos-delay="300" data-aos-duration="1000" >
+                <h3>Fandom</h3>
+                <p>When our series and films become cultural moments, you can feel <br> it across music, books, fashion, travel and more.</p>
+              </div>
+            </div>
+          </div>
+          
+          
+
+    </section>
+ 
+    <!-------------------------------------------- Footer Section ------------------------------------------------->
+ <section class="footer-about">
+    <div class="footer-section d-flex flex-column align-items-center justify-content-center">
+      <a href="#" class="navbar-brand "
+      > <br><img src="image/logo.png" alt="" class="LOGO"
+    /></a>
+    <p>
+      This Netflix clone is a personal project created for educational purposes only. <br> All rights to the original content, trademarks, and logos belong to Netflix, Inc.  
+    </p>
+    <div class="quick-links d-flex flex-row  ">
+      <ul>
+        <h1>Quick Links</h1>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Trending Movie</a> </li>
+        <li><a href="#">Questions</a></li>
+      </ul>
+      <ul>
+        <h1>Helps</h1>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Privcy</a></li>
+        <li><a href="#">Support</a> </li>
+        <li><a href="#">Career</a></li>
+      </ul>
+      <ul>
+        <h1>Contact Us</h1>
+        <li><a href="#">sign in</a></li>
+        <li><a href="#">netflix.com</a></li>
+        <li><a href="#">Media center</a> </li>
+        <li><a href="#">Account</a></li>
+      </ul> 
+    </div><hr>
+    <div class="icons-social  d-flex gap-3">
+    <i class="bi bi-instagram"></i>
+    <i class="bi bi-facebook"></i>
+    <i class="bi bi-linkedin"></i>
+    <i class="bi bi-twitter-x"></i>
+    <i class="bi bi-youtube"></i>
+    </div>
+    <p class="end">© 2025 Netflix Clone | Designed by Arzoo Muhammadi | For educational purposes only.</p>
+    </div>
+  </section> 
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+      <script src="js/script.js"></script>
+      <!-- AOS JS -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+    </body>
+  </html>
+  

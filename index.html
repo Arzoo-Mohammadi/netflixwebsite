@@ -1,0 +1,1319 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="image/icon/netflix-symbol-black.png" />
+    <title>Netflix Website Project | Stream the best movies and shows</title>
+  
+    <!-- ✅ Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+    <!-- ✅ Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  
+    <!-- ✅ Font Awesome  -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  
+    <!-- ✅ AOS  -->
+    <link rel="stylesheet" href="aos/aos.css" />
+  
+    <!-- ✅ Boxicons -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  
+    <!-- ✅ Google Fonts  -->
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600&display=swap" rel="stylesheet">
+  
+    <!-- ✅ C Styles -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  
+  <body>
+    <!-------------------------------------------------START------------------------------------------->
+    <!-- 🔴Header🔴 -->
+
+    <nav class="navbar fixed-top">
+      <div class="container-fluid ">
+        <a href="#" class="navbar-brand "
+          ><img src="image/logo/logo.png" alt="" class="LOGO"
+        /></a>
+         <div>
+          <!-- Menu Button -->
+        <button
+          class="navbar-toggler float-sm-end"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasDarkNavbar"
+          aria-controls="offcanvasDarkNavbar"
+          aria-label="Toggle navigation"
+        >
+          <i class="icon-toggle bi bi-list"></i>
+        </button>
+        <!-- Sign-In Button -->
+        <button
+        type="button"
+        class="btn sign-in "
+        data-bs-toggle="modal"
+        data-bs-target="#signInModal"
+      >
+        Sign In
+      </button>
+         </div>
+       
+        <!-- MENU-SLIDER & Offcanvance -->
+        <div
+          class="offcanvas offcanvas-end"
+          tabindex="-1"
+          id="offcanvasDarkNavbar"
+          aria-labelledby="offcanvasDarkNavbarLabel"
+          style="transition: 1s"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">
+              <img
+                src="image/logo.png"
+                alt=""
+                class="LOGO"
+                style="margin-top: 20px"
+              />
+            </h5>
+            <button
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+              style="
+                margin-top: 30px;
+                margin-right: 20px;
+                background-color: transparent;
+                border: none;
+              "
+              class="close-btn"
+            >
+              <i class="bi bi-x-octagon"></i>
+            </button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-5">
+              <li class="nav-item itemDesign">
+                <a href="#" aria-current="page">Home</a>
+              </li>
+              <li class="nav-item itemDesign">
+                <a href="aboutUs.html" aria-current="page">About</a>
+              </li>
+              <li class="nav-item itemDesign">
+                <a href="#trending-section" aria-current="page">Trending Movie</a>
+              </li>
+              <li class="nav-item itemDesign">
+                <a href="#new-on-netflix" aria-current="page">New On Netflix</a>
+              </li>
+              <li class="nav-item itemDesign">
+                <a href="#Question" aria-current="page">Questions</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  href="#"
+                  class="dropdown-toggle "
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  style="color: white; text-decoration: none;"
+                  >Our Blogs</a
+                >
+                <ul class="dropdown-menu "  >
+                  <li>
+                    <a href="#top-10" class="dropdown-item">Top-10 Section</a>
+                  </li>
+                  <li><a href="#popular" class="dropdown-item">Popular Movies</a></li>
+
+                  <li>
+                    <hr class="dropdown-divider" />
+                  </li>
+                  <li>
+                    <a href="#" class="dropdown-item">Something else</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <form class="d-flex mt-3" role="search">
+              <input
+                class="form-control me-2 srch"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-danger " type="submit">
+                <i class="bi bi-search"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- Sign-In Modal -->
+    <div
+      class="modal fade  "
+      id="signInModal"
+      tabindex="-1"
+      aria-labelledby="signInModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" style="box-shadow: 0px 0px 6px #b50606; border-radius: 10px; width: 400px;">
+        <div class="modal-content" style="background-color: black; ">
+          <div class="modal-header">
+            <h5 class="modal-title" id="signInModalLabel" style=" color: #b50606;">Sign In</h5>
+            <button
+              type="button"
+              class="btn-close btn-danger"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body  " style="background-color: rgba(0, 0, 0, 0.947);" >
+            <form>
+              <div class="mb-3">
+                <label for="email" class="form-label " style="color: rgb(255, 255, 255)"
+                  >Email address</label
+                >
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  style="background-color: transparent; "
+                />
+              </div>
+              <div class="mb-3">
+                <label for="password" class="form-label" style="color: rgb(255, 255, 255)"
+                  >Password</label
+                >
+                <input
+                  type="password"
+                  class="form-control"
+                  id="password"
+                  style="background-color: transparent; "
+                />
+              </div>
+              <button type="submit" class="btn  w-50 text-white" style="background-color: #880202; margin-left: 101px; ">
+                Sign In
+              </button>
+            </form><br>
+            <h2 class="fs-4 fw-bold mb-3 text-white" style="color: rgb(255, 255, 255); padding-left: 90px; font-family:Cormorant Garamond ; ">Or use a third-party</h2>
+         
+            <button class="w-100 py-2 mb-2 btn btn-outline-dark rounded-3 text-secondary " type="submit">
+            <svg xmlns="http://www.w3.org/2000/svg" style="color: rgb(255, 255, 255);" width="16" height="16" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
+              <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
+            </svg>
+            Sign up with Twitter
+          </button>
+          <button class="w-100 py-2 mb-2 btn btn-outline-primary rounded-3" type="submit">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+              <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+            </svg>
+            Sign up with Facebook
+          </button>
+          <button class="w-100 py-2 mb-2 btn btn-outline-secondary rounded-3" type="submit">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+              <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
+            </svg>
+            Sign up with GitHub
+          </button>
+        </form>
+      </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-------------------------------------------- Main & Home Page ------------------------------------------------->
+       <!--🔴 carousel & Slider -->
+       <div id="carousel">
+        <!-- list item -->
+        <div class="list">
+                <!-- slide-1 -->
+            <div class="item">
+                <img src="image/slider/slider1.jpg" >
+                <div class="content">
+                    <div class="author">action</div>
+                    <div class="title">AVENGERS</div><br>
+                    <div class="topic">
+                      <h3>String:<span > Robert Downey Jr., Chris Evans, Mark Ruffalo</span></h3>
+                      <h3>Genres:<span > Action</span></h3>
+                      <h3>Tags:<span > Action, Adventure,Horror</span></h3>
+                    </div><br>
+                    <div class="des">
+                  When Tony Stark and Bruce Banner try to jump-start a dormant
+                  peacekeeping program <br>called Ultron, things go horribly wrong
+                  and it's up to Earth's nightest heroes to stop the
+                  villainous Ultron from enacting his terrible plan.
+                    </div>
+                    <div class="buttons">
+                        <button class="button-play">Play Now</button>
+                        <button>See More</button>
+                    </div>
+                </div>
+            </div>
+                <!-- slide-2 -->
+            <div class="item">
+                <img src="image/slider/slider2.jpg">
+                <div class="content">
+                    <div class="author">animation</div>
+                    <div class="title">FROZEN</div><br>
+                    <div class="topic">
+                      <h3>String:<span > Kristan Bell, Idina menzel, Jonathan Groff</span></h3>
+                      <h3>Genres:<span > Animation</span></h3>
+                      <h3>Tags:<span > Animation,Adventure,Comedy</span></h3>
+                    </div>
+                    <div class="des"><br>                    
+                  When the newly crowned Queen Elsa accidentally uses her
+                  power to turn things <br> into ice to curse her home in infinte
+                  winter, her sister Anna teams up.                
+                    </div>
+                    <div class="buttons">
+                        <button class="button-play">Play Now</button>
+                        <button>See More</button>
+                    </div>
+                </div>
+            </div>
+                <!-- slide-3 -->
+            <div class="item">
+                <img src="image/slider/slider3.jpg">
+                <div class="content">
+                    <div class="author">biography</div>
+                    <div class="title">THE CROWN</div><br>
+                    <div class="topic">
+                      <h3>String:<span > Clarie Foy, Olivia Colman, Imelda Staunton</span></h3>
+                      <h3>Genres:<span > Biography</span></h3>
+                      <h3>Tags:<span > Biography,Adventure,Culture</span></h3></div>
+                    <div class="des"><br>
+                        
+                  Paranomal investigators Ed and Lorraine Warren work to help
+                  a family terrorized <br> by a dark presence in their farmhouse.
+                
+                    </div>
+                    <div class="buttons">
+                        <button class="button-play">Play Now</button>
+                        <button>See More</button>
+                    </div>
+                </div>
+            </div>
+                <!-- slide-4 -->
+            <div class="item">
+            <img src="image/slider/slider-4.jpg" >
+                <div class="content">
+                    <div class="author">action</div>
+                    <div class="title">AVATAR</div><br>
+                    <div class="topic">
+                      <h3>String: <span > Clarie Foy, Olivia Colman, Imelda Staunton</span></h3>
+                      <h3>Genres:<span > Action</span></h3>
+                      <h3>Tags:<span > Biography,Adventure,Culture</span></h3></div>
+                    <div class="des"><br>
+                A paraplegic Marine dispatched to the moon Pandora on a unique
+                mission becomes <br> torn between following his orders and
+                protecting the world he feels is his home.
+                    </div>
+                    <div class="buttons">
+                        <button class="button-play">SEE MORE</button>
+                        <button>SUBSCRIBE</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- list thumnail -->
+        <div class="thumbnail">
+            <div class="item">
+                <img src="image/slider/slider1.jpg ">
+                <div class="content">
+                    <div class="title" style="font-size: 20px;">
+                      AVENGERS
+                    </div>
+                    <div class="description">
+                       Action
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="image/slider/slider2.jpg">
+                <div class="content">
+                    <div class="title" style="font-size: 20px;">
+                        FROZEN
+                    </div>
+                    <div class="description">
+                        Animation
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="image/slider/slider3.jpg">
+                <div class="content">
+                    <div class="title" style="font-size: 20px;">
+                      THE CROWN
+                    </div>
+                    <div class="description">
+                        Biography
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="image/slider/slider-4.jpg">
+                <div class="content">
+                    <div class="title" style="font-size: 20px;">
+                        AVATAR
+                    </div>
+                    <div class="description">
+                        Action
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- next prev -->
+
+        <div class="arrows">
+            <button id="prev"><</button>
+            <button id="next" style=" position: relative ; left: 1200px;">></button>
+        </div>
+        <!-- time running -->
+        <div class="time"></div>
+       
+        <a href="#" class="top-button"> <img src="image/icon/netflix-symbol-black.png" alt="">  </a>
+       
+    </div>
+<!--------------------------------------------------Favorite Section------------------------------------------------->
+  <section class="favorite-section" id="top-10">
+    <div class="carousel slide" data-bs-ride="carousel" id="carouselExample">
+      <div class="carousel-inner">
+        <div class="iq-main-header d-flex align-items-center justify-content-between">
+          <h4 class="main-title">Top Picks For You</h4>
+          <a href="#" class="iq-view-all">View All</a>
+        </div>
+        <!-- Slide === 1 -->
+        <div class="carousel-item active">
+          <div class="col-md-3">
+            <div class="card">
+              <li class="slide-item">
+                <div class="block-images position-relative">
+                  <div class="img-box">
+                    <img src="image/favorite/f1.jpg" class="img-fluid" alt="" />
+                  </div>
+                  <div class="block-description">
+                    <h6 class="iq-title">
+                      <a href="#"> Insidious </a>
+                    </h6>
+                    <div class="movie-time d-flex align-items-center my-2">
+                      <div class="badge badge-secondary p-1 mr-2">16+</div>
+                      <span class="text-white">1h 43min</span>
+                    </div>
+                    <div class="hover-buttons">
+                      <span class="btn btn-hover iq-button">
+                        <i class="fa fa-play mr-1"></i>
+                        Play Now
+                      </span>
+                    </div>
+                  </div>
+                  <div class="block-social-info">
+                    <ul class="list-inline p-0 m-0 music-play-lists">
+                      <li class="share">
+                        <span><i class="bi bi-share"></i></span>
+                        <div class="share-box">
+                          <div class="d-flex align-items-center">
+                            <a href="#" class="share-ico"><i class="bi bi-share"></i></a>
+                            <a href="#" class="share-ico"><i class="bi bi-youtube"></i></a>
+                            <a href="#" class="share-ico"><i class="bi bi-instagram"></i></a>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <span><i class="bi bi-suit-heart-fill"></i></span>
+                        <span class="count-box">19+</span>
+                      </li>
+                      <li>
+                        <span><i class="bi bi-plus"></i></span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide ==== 2 -->
+        <div class="carousel-item">
+          <div class="col-md-3">
+            <div class="card">
+              <li class="slide-item">
+                <div class="block-images position-relative">
+                  <div class="img-box">
+                    <img src="image/favorite/f2.jpg" class="img-fluid" alt="" />
+                  </div>
+                  <div class="block-description">
+                    <h6 class="iq-title">
+                      <a href="#"> War </a>
+                    </h6>
+                    <div class="movie-time d-flex align-items-center my-2">
+                      <div class="badge badge-secondary p-1 mr-2">12+</div>
+                      <span class="text-white">2h 34min</span>
+                    </div>
+                    <div class="hover-buttons">
+                      <span class="btn btn-hover iq-button">
+                        <i class="fa fa-play mr-1"></i>
+                        Play Now
+                      </span>
+                    </div>   
+                  </div>
+                  <div class="block-social-info">
+                    <ul class="list-inline p-0 m-0 music-play-lists">
+                      <li class="share">
+                        <span><i class="bi bi-share"></i></span>
+                        <div class="share-box">
+                          <div class="d-flex align-items-center">
+                            <a href="#" class="share-ico"><i class="bi bi-share"></i></a>
+                            <a href="#" class="share-ico"><i class="bi bi-youtube"></i></i></a>
+                            <a href="#" class="share-ico"><i class="bi bi-instagram"></i></a>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <span><i class="bi bi-suit-heart-fill"></i></span>
+                        <span class="count-box">58+</span>
+                      </li>
+                      <li>
+                        <span><i class="bi bi-plus"></i></span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+            </div>
+          </div>
+        </div>
+        <!-- Slide ==== 3 -->
+        <div class="carousel-item">
+          <div class="col-md-3">
+            <div class="card">
+              <li class="slide-item">
+                <div class="block-images position-relative">
+                  <div class="img-box">
+                    <img src="image/favorite/f3.jpg" class="img-fluid" alt="" />
+                  </div>
+                  <div class="block-description">
+                    <h6 class="iq-title">
+                      <a href="#"> Five Feet Apart </a>
+                    </h6>
+                    <div class="movie-time d-flex align-items-center my-2">
+                      <div class="badge badge-secondary p-1 mr-2">18+</div>
+                      <span class="text-white">2h 57min</span>
+                    </div>
+                    <div class="hover-buttons">
+                      <span class="btn btn-hover iq-button">
+                        <i class="fa fa-play mr-1"></i>
+                        Play Now
+                      </span>
+                    </div>
+                  </div>
+                  <div class="block-social-info">
+                    <ul class="list-inline p-0 m-0 music-play-lists">
+                      <li class="share">
+                        <span><i class="bi bi-share"></i></span>
+                        <div class="share-box">
+                          <div class="d-flex align-items-center">
+                            <a href="#" class="share-ico"><i class="bi bi-share"></i></a>
+                            <a href="#" class="share-ico"><i class="bi bi-youtube"></i></i></a>
+                            <a href="#" class="share-ico"><i class="bi bi-instagram"></i></a>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <span><i class="bi bi-suit-heart-fill"></i></span>
+                        <span class="count-box">19+</span>
+                      </li>
+                      <li>
+                        <span><i class="bi bi-plus"></i></span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+            </div>
+          </div>
+        </div>
+        <!-- Slide ==== 4 -->
+        <div class="carousel-item">
+          <div class="col-md-3">
+            <div class="card">
+              <li class="slide-item">
+                <div class="block-images position-relative">
+                  <div class="img-box">
+                    <img src="image/favorite/f4.jpg" class="img-fluid" alt="" />
+                  </div>
+                  <div class="block-description">
+                    <h6 class="iq-title">
+                      <a href="#"> Chhichore </a>
+                    </h6>
+                    <div class="movie-time d-flex align-items-center my-2">
+                      <div class="badge badge-secondary p-1 mr-2">10+</div>
+                      <span class="text-white">2h 23min</span>
+                    </div>
+                    <div class="hover-buttons">
+                      <span class="btn btn-hover iq-button">
+                        <i class="fa fa-play mr-1"></i>
+                        Play Now
+                      </span>
+                    </div>
+                  </div>
+                  <div class="block-social-info">
+                    <ul class="list-inline p-0 m-0 music-play-lists">
+                      <li class="share">
+                        <span><i class="bi bi-share"></i></span>
+                        <div class="share-box">
+                          <div class="d-flex align-items-center">
+                            <a href="#" class="share-ico"><i class="bi bi-share"></i></a>
+                            <a href="#" class="share-ico"><i class="bi bi-youtube"></i></i></a>
+                            <a href="#" class="share-ico"><i class="bi bi-instagram"></i></a>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <span><i class="bi bi-suit-heart-fill"></i></span>
+                        <span class="count-box">19+</span>
+                      </li>
+                      <li>
+                        <span><i class="bi bi-plus"></i></span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+            </div>
+          </div>
+        </div>
+        <!-- Slide ==== 5 -->
+        <div class="carousel-item">
+          <div class="col-md-3">
+            <div class="card">
+              <li class="slide-item">
+                <div class="block-images position-relative">
+                  <div class="img-box">
+                    <img src="image/favorite/f5.jpg" class="img-fluid" alt="" />
+                  </div>
+                  <div class="block-description">
+                    <h6 class="iq-title">
+                      <a href="#"> Doctor Strange </a>
+                    </h6>
+                    <div class="movie-time d-flex align-items-center my-2">
+                      <div class="badge badge-secondary p-1 mr-2">12+</div>
+                      <span class="text-white">1h 55min</span>
+                    </div>
+                    <div class="hover-buttons">
+                      <span class="btn btn-hover iq-button">
+                        <i class="fa fa-play mr-1"></i>
+                        Play Now
+                      </span>
+                    </div>
+                  </div>
+                  <div class="block-social-info">
+                    <ul class="list-inline p-0 m-0 music-play-lists">
+                      <li class="share">
+                        <span><i class="bi bi-share"></i></span>
+                        <div class="share-box">
+                          <div class="d-flex align-items-center">
+                            <a href="#" class="share-ico"><i class="bi bi-share"></i></a>
+                            <a href="#" class="share-ico"><i class="bi bi-youtube"></i></i></a>
+                            <a href="#" class="share-ico"><i class="bi bi-instagram"></i></a>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <span><i class="bi bi-suit-heart-fill"></i></span>
+                        <span class="count-box">19+</span>
+                      </li>
+                      <li>
+                        <span><i class="bi bi-plus"></i></span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+            </div>
+          </div>
+        </div>
+        <!-- Slide ==== 6 -->
+        <div class="carousel-item">
+          <div class="col-md-3">
+            <div class="card">
+              <li class="slide-item">
+                <div class="block-images position-relative">
+                  <div class="img-box">
+                    <img src="image/favorite/fe3.jpg" class="img-fluid" alt="" />
+                  </div>
+                  <div class="block-description">
+                    <h6 class="iq-title">
+                      <a href="#"> Incredible </a>
+                    </h6>
+                    <div class="movie-time d-flex align-items-center my-2">
+                      <div class="badge ">16+</div>
+                      <span class="text-white ">1h 43min</span>
+                    </div>
+                    <div class="hover-buttons">
+                      <span class="btn btn-hover iq-button">
+                        <i class="fa fa-play mr-1"></i>
+                        Play Now
+                      </span>
+                    </div>
+                  </div>
+                  <div class="block-social-info">
+                    <ul class="list-inline p-0 m-0 music-play-lists">
+                      <li class="share">
+                        <span><i class="bi bi-share"></i></i></span>
+                        <div class="share-box">
+                          <div class="d-flex align-items-center">
+                            <a href="#" class="share-ico"><i class="bi bi-share"></i></i></a>
+                            <a href="#" class="share-ico"><i class="bi bi-youtube"></i></i></a>
+                            <a href="#" class="share-ico"><i class="bi bi-instagram"></i></a>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <span><i class="bi bi-suit-heart-fill"></i></span>
+                        <span class="count-box">19+</span>
+                      </li>
+                      <li>
+                        <span><i class="bi bi-plus"></i></span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- next prev -->
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExample"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExample"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </section>
+    
+  <!--------------------------------------------Popular Section------------------------------------------------->
+  <section class="favorite-section responsive" id="popular">
+    <div class="carousel slide " data-bs-ride="carousel" id="carouselExample2">
+      <div class="carousel-inner ">
+        <div class="iq-main-header d-flex align-items-center justify-content-between">
+          <h4 class="main-title">Popular Movies</h4>
+          <a href="#" class="iq-view-all">View All</a>
+        </div>
+        <!-- 1 -->
+        <div class="carousel-item active">
+          <div class="col-md-3">
+            <div class="card">
+              <li class="slide-item">
+                <div class="block-images position-relative">
+                  <div class="img-box">
+                    <img src="image/popular/u1.jpg" class="img-fluid" alt="" />
+                  </div>
+                  <div class="block-description">
+                    <h6 class="iq-title">
+                      <a href="#">Mulan</a>
+                    </h6>
+                    <div class="movie-time d-flex align-items-center my-2 ">
+                      <div class="badge badge-secondary p-1 mr-2">10+</div>
+                      <span class="text-white">2h 40min</span>
+                    </div>
+                    <div class="hover-buttons">
+                      <span class="btn btn-hover iq-button">
+                        <i class="fa fa-play mr-1"></i>
+                        Play Now
+                      </span>
+                    </div>
+                  </div>
+                  <div class="block-social-info">
+                    <ul class="list-inline p-0 m-0 music-play-lists">
+                      <li class="share">
+                        <span><i class="bi bi-share"></i></span>
+                        <div class="share-box">
+                          <div class="d-flex align-items-center">
+                            <a href="#" class="share-ico"><i class="bi bi-share"></i></a>
+                            <a href="#" class="share-ico"><i class="bi bi-youtube"></i></a>
+                            <a href="#" class="share-ico"><i class="bi bi-instagram"></i></a>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <span><i class="bi bi-suit-heart-fill"></i></span>
+                        <span class="count-box">19+</span>
+                      </li>
+                      <li>
+                        <span><i class="bi bi-plus"></i></span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide ==== 2 -->
+        <div class="carousel-item">
+          <div class="col-md-3">
+            <div class="card">
+              <li class="slide-item">
+                <div class="block-images position-relative">
+                  <div class="img-box">
+                    <img src="image/popular/u2.jpg" class="img-fluid" alt="" />
+                  </div>
+                  <div class="block-description">
+                    <h6 class="iq-title">
+                      <a href="#">Laxmii</a>
+                    </h6>
+                    <div class="movie-time d-flex align-items-center my-2 ">
+                      <div class="badge badge-secondary p-1 mr-2">18+</div>
+                      <span class="text-white">2h 20min</span>
+                    </div>
+                    <div class="hover-buttons">
+                      <span class="btn btn-hover iq-button">
+                        <i class="fa fa-play mr-1"></i>
+                        Play Now
+                      </span>
+                    </div>   
+                  </div>
+                  <div class="block-social-info">
+                    <ul class="list-inline p-0 m-0 music-play-lists">
+                      <li class="share">
+                        <span><i class="bi bi-share"></i></span>
+                        <div class="share-box">
+                          <div class="d-flex align-items-center">
+                            <a href="#" class="share-ico"><i class="bi bi-share"></i></a>
+                            <a href="#" class="share-ico"><i class="bi bi-youtube"></i></i></a>
+                            <a href="#" class="share-ico"><i class="bi bi-instagram"></i></a>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <span><i class="bi bi-suit-heart-fill"></i></span>
+                        <span class="count-box">58+</span>
+                      </li>
+                      <li>
+                        <span><i class="bi bi-plus"></i></span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+            </div>
+          </div>
+        </div>
+        <!-- Slide ==== 3 -->
+        <div class="carousel-item">
+          <div class="col-md-3">
+            <div class="card">
+              <li class="slide-item">
+                <div class="block-images position-relative">
+                  <div class="img-box">
+                    <img src="image/popular/u3.jpg" class="img-fluid" alt="" />
+                  </div>
+                  <div class="block-description">
+                    <h6 class="iq-title">
+                      <a href="#"> Capitan America </a>
+                    </h6>
+                    <div class="movie-time d-flex align-items-center my-2 ">
+                      <div class="badge badge-secondary p-1 mr-2">12+</div>
+                      <span class="text-white">2h 4min</span>
+                    </div>
+                    <div class="hover-buttons">
+                      <span class="btn btn-hover iq-button">
+                        <i class="fa fa-play mr-1"></i>
+                        Play Now
+                      </span>
+                    </div>
+                  </div>
+                  <div class="block-social-info">
+                    <ul class="list-inline p-0 m-0 music-play-lists">
+                      <li class="share">
+                        <span><i class="bi bi-share"></i></span>
+                        <div class="share-box">
+                          <div class="d-flex align-items-center">
+                            <a href="#" class="share-ico"><i class="bi bi-share"></i></a>
+                            <a href="#" class="share-ico"><i class="bi bi-youtube"></i></i></a>
+                            <a href="#" class="share-ico"><i class="bi bi-instagram"></i></a>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <span><i class="bi bi-suit-heart-fill"></i></span>
+                        <span class="count-box">19+</span>
+                      </li>
+                      <li>
+                        <span><i class="bi bi-plus"></i></span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+            </div>
+          </div>
+        </div>
+        <!-- Slide ==== 4 -->
+        <div class="carousel-item">
+          <div class="col-md-3">
+            <div class="card">
+              <li class="slide-item">
+                <div class="block-images position-relative">
+                  <div class="img-box">
+                    <img src="image/popular/u4.jpg" class="img-fluid" alt="" />
+                  </div>
+                  <div class="block-description">
+                    <h6 class="iq-title">
+                      <a href="#">Life of Pie </a>
+                    </h6>
+                    <div class="movie-time d-flex align-items-center my-2 ">
+                      <div class="badge badge-secondary p-1 mr-2">11+</div>
+                      <span class="text-white">2h 7min</span>
+                    </div>
+                    <div class="hover-buttons">
+                      <span class="btn btn-hover iq-button">
+                        <i class="fa fa-play mr-1"></i>
+                        Play Now
+                      </span>
+                    </div>
+                  </div>
+                  <div class="block-social-info">
+                    <ul class="list-inline p-0 m-0 music-play-lists">
+                      <li class="share">
+                        <span><i class="bi bi-share"></i></span>
+                        <div class="share-box">
+                          <div class="d-flex align-items-center">
+                            <a href="#" class="share-ico"><i class="bi bi-share"></i></a>
+                            <a href="#" class="share-ico"><i class="bi bi-youtube"></i></i></a>
+                            <a href="#" class="share-ico"><i class="bi bi-instagram"></i></a>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <span><i class="bi bi-suit-heart-fill"></i></span>
+                        <span class="count-box">19+</span>
+                      </li>
+                      <li>
+                        <span><i class="bi bi-plus"></i></span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+            </div>
+          </div>
+        </div>
+        <!-- Slide ==== 5 -->
+        <div class="carousel-item">
+          <div class="col-md-3">
+            <div class="card">
+              <li class="slide-item">
+                <div class="block-images position-relative">
+                  <div class="img-box">
+                    <img src="image/popular/u6.jpg" class="img-fluid" alt="" />
+                  </div>
+                  <div class="block-description">
+                    <h6 class="iq-title">
+                      <a href="#"> Harry Potter </a>
+                    </h6>
+                    <div class="movie-time d-flex align-items-center my-2 ">
+                      <div class="badge badge-secondary p-1 mr-2">10+</div>
+                      <span class="text-white">8 Parts</span>
+                    </div>
+                    <div class="hover-buttons">
+                      <span class="btn btn-hover iq-button">
+                        <i class="fa fa-play mr-1"></i>
+                        Play Now
+                      </span>
+                    </div>
+                  </div>
+                  <div class="block-social-info">
+                    <ul class="list-inline p-0 m-0 music-play-lists">
+                      <li class="share">
+                        <span><i class="bi bi-share"></i></span>
+                        <div class="share-box">
+                          <div class="d-flex align-items-center">
+                            <a href="#" class="share-ico"><i class="bi bi-share"></i></a>
+                            <a href="#" class="share-ico"><i class="bi bi-youtube"></i></i></a>
+                            <a href="#" class="share-ico"><i class="bi bi-instagram"></i></a>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <span><i class="bi bi-suit-heart-fill"></i></span>
+                        <span class="count-box">19+</span>
+                      </li>
+                      <li>
+                        <span><i class="bi bi-plus"></i></span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+            </div>
+          </div>
+        </div>
+        <!-- Slide ==== 6 -->
+        <div class="carousel-item">
+          <div class="col-md-3">
+            <div class="card">
+              <li class="slide-item">
+                <div class="block-images position-relative">
+                  <div class="img-box">
+                    <img src="image/popular/u5.jpg" class="img-fluid" alt="" />
+                  </div>
+                  <div class="block-description">
+                    <h6 class="iq-title">
+                      <a href="#"> Mission Mangal </a>
+                    </h6>
+                    <div class="movie-time d-flex align-items-center my-2 ">
+                      <div class="badge ">16+</div>
+                      <span class="text-white ">1h 43min</span>
+                    </div>
+                    <div class="hover-buttons">
+                      <span class="btn btn-hover iq-button">
+                        <i class="fa fa-play mr-1  "></i>
+                        Play Now
+                      </span>
+                    </div>
+                  </div>
+                  <div class="block-social-info">
+                    <ul class="list-inline p-0 m-0 music-play-lists">
+                      <li class="share">
+                        <span><i class="bi bi-share"></i></i></span>
+                        <div class="share-box">
+                          <div class="d-flex align-items-center">
+                            <a href="#" class="share-ico"><i class="bi bi-share"></i></i></a>
+                            <a href="#" class="share-ico"><i class="bi bi-youtube"></i></i></a>
+                            <a href="#" class="share-ico"><i class="bi bi-instagram"></i></a>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <span><i class="bi bi-suit-heart-fill"></i></span>
+                        <span class="count-box">19+</span>
+                      </li>
+                      <li>
+                        <span><i class="bi bi-plus"></i></span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- next prev -->
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExample2"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExample2"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </section>
+<!--------------------------------------------Avatar Section------------------------------------------------->
+   <section class="Avatar-Section" style="background: url(image/popular/avatar.jpg); background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   object-fit: cover;
+   height: 100vh;
+   width: 100%;
+   background-attachment: fixed;">
+       <div class="item-avatar d-flex ">
+                <div class="content-avatar">
+                    <div class="title-avatar">AVATAR</div><br>
+                    <div class="movie-time d-flex align-items-center my-2">
+                      <div class="badge ">10+</div>
+                      <span class="text-danger ">2h 23min</span>
+                    </div>
+                    <div class="des-avatar "><br>
+                      Avatar: The Way of Water” begins to tell the story of the Sully <br> family  (Jake, Neytiri, and their kids), the trouble that follows <br> them, the lengths  they  go  to keep each other safe, the battles <br> they fight to stay alive, and  the tragedies they endure.
+                    </div><br><br>
+                    <div class="buttons-avatar">
+                        <button class="button-play-avatar"><a href="https://www.youtube.com/watch?v=d9MyW72ELq0"> Watch Now </a></button>
+                        <button class="More">More Details</button><br><br>
+                        
+                    </div>
+                </div>
+                <div class="image-side">
+                  <img src="image/slider/slider-4.jpg" style="width: 100%; height: 450px; max-width: 700px;" alt="">
+                </div>
+            </div>
+   </section>
+<!--------------------------------------------Trending Section------------------------------------------------->
+<section id="trending-section" style="background-image: url(image/top-10/luucy.jpg); width: 100%; height: 100%; position: relative;">
+  <div class="container-part">
+    <h4 class=" mb-4 trend">Trending Movie :</h4>
+      <div class="col-md-3 d-flex flex-column align-items-center vertical-thumbnails">
+        <!-- 1 -->
+        <img src="image/top-10/01.jpg" 
+        onclick="changeBackground('image/top-10/01 - Copy.jpg', 'Harry Potter ')" />
+        <!-- 2 -->
+        <img src="image/top-10/02.jpg" 
+        onclick="changeBackground('image/top-10/02 - Copy.jpg', 'The Queen`s')" />
+        <!-- 3 -->
+        <img src="image/top-10/04.jpg" 
+        onclick="changeBackground('image/top-10/04 - Copy.jpg', 'Stranger Things')" />
+      </div>
+  </div>
+
+  <!-- Text Container (Initially Hidden) -->
+  <div id="text-overlay">  Lucy 2014  
+    <br><a href="https://www.youtube.com/watch?v=na38B-J4ZPw"><button id="play-button">Play Now</button></a> 
+   </p>
+  </div>
+</section>    
+  <!-------------------------------------------- New On Netflix Section ------------------------------------------------->
+    <div class="container mt-4" id="new-on-netflix">
+      <h2 class="text-center">New On Netflix</h2>
+      <div class="row image-container" id="imageGallery"></div>
+      <!-- Pagination Controls -->
+      <nav class="d-flex justify-content-center align-items-center mt-3">
+          <button class="btn me-2" id="prevBtn">Previous</button>
+          <ul class="pagination mb-0" id="pagination"></ul>
+          <button class="btn ms-2" id="nextBtn">Next</button>
+      </nav>
+    </div><br> <br>
+<!-------------------------------------------- Frequently Asked Section ------------------------------------------------->
+<section id="Question" class="frequently" style="background: url(image/suggested/background.jpg);  background-position: center; background-repeat: no-repeat; background-size: cover; height:100%; ">
+
+<div class="title-questions">
+  <h1>Frequently Asked Questions</h1>
+<div class="accordion" id="accordionExample">
+  <!-- item 1 -->
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button
+        class="accordion-button"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseOne"
+        aria-expanded="true"
+        aria-controls="collapseOne"
+      >
+       What is Netflix
+      </button>
+    </h2>
+    <div
+      id="collapseOne"
+      class="accordion-collapse collapse "
+      data-bs-parent="#accordionExample"
+    >
+      <div class="accordion-body">
+        <strong>Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices.
+
+          You can watch as much as you want, whenever you want without a single commercial – all for one low monthly price. There's always something new to discover and new TV shows and movies are added every week!</strong>
+      </div>
+    </div>
+  </div>
+  <!-- item 2 -->
+  <div class="accordion-item item-2">
+    <h2 class="accordion-header">
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseTwo"
+        aria-expanded="false"
+        aria-controls="collapseTwo"
+      >
+     Where can i watch?
+      </button>
+    </h2>
+    <div
+      id="collapseTwo"
+      class="accordion-collapse collapse"
+      data-bs-parent="#accordionExample"
+    >
+      <div class="accordion-body">
+        <strong>Watch anywhere, anytime. Sign in with your Netflix account to watch instantly on the web at netflix.com from your personal computer or on any internet-connected device that offers the Netflix app, including smart TVs, smartphones, tablets, streaming media players and game consoles.
+
+          You can also download your favorite shows with the iOS or Android app. Use downloads to watch while you're on the go and without an internet connection. Take Netflix with you anywhere.</strong>
+      </div>
+    </div>
+  </div>
+  <!-- item 3 -->
+  <div class="accordion-item item-2">
+    <h2 class="accordion-header">
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapsethree"
+        aria-expanded="false"
+        aria-controls="collapsethree"
+
+      >
+       How much Netflix cost?
+      </button>
+    </h2>
+    <div
+      id="collapsethree"
+      class="accordion-collapse collapse"
+      data-bs-parent="#accordionExample"
+    >
+      <div class="accordion-body">
+        <strong>Watch Netflix on your smartphone, tablet, Smart TV, laptop, or streaming device, all for one fixed monthly fee. Plans range from USD 3.99 to USD 9.99 a month. No extra costs, no contracts.</strong> 
+      </div>
+    </div>
+  </div>
+  <!-- item 4 -->
+  <div class="accordion-item ">
+    <h2 class="accordion-header">
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapsefour"
+        aria-expanded="false"
+        aria-controls="collapsefour"
+      >
+       Is Netflix good for kids?
+      </button>
+    </h2>
+    <div
+      id="collapsefour"
+      class="accordion-collapse collapse"
+      data-bs-parent="#accordionExample"
+    >
+      <div class="accordion-body">
+        <strong>The Netflix Kids experience is included in your membership to give parents control while kids enjoy family-friendly TV shows and movies in their own space.
+
+          Kids profiles come with PIN-protected parental controls that let you restrict the maturity rating of content kids can watch and block specific titles you don’t want kids to see.</strong> 
+      </div>
+    </div>
+  </div>
+  <!-- item 5 -->
+  <div class="accordion-item ">
+    <h2 class="accordion-header">
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapsefive"
+        aria-expanded="false"
+        aria-controls="collapsefive"
+      >
+      What can i watch on Netflix?
+      </button>
+    </h2>
+    <div
+      id="collapsefive"
+      class="accordion-collapse collapse"
+      data-bs-parent="#accordionExample"
+    >
+      <div class="accordion-body">
+        <strong>Netflix has an extensive library of feature films, documentaries, TV shows, anime, award-winning Netflix originals, and more. Watch as much as you want, anytime you want.</strong> 
+      </div>
+    </div>
+  </div>
+  <!-- item 6 -->
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapsesix"
+        aria-expanded="false"
+        aria-controls="collapsesix"
+      >
+       How do i cancel?
+      </button>
+    </h2>
+    <div
+      id="collapsesix"
+      class="accordion-collapse collapse"
+      data-bs-parent="#accordionExample"
+    >
+      <div class="accordion-body">
+        <strong>Netflix is flexible. There are no pesky contracts and no commitments. You can easily cancel your account online in two clicks. There are no cancellation fees – start or stop your account anytime.</strong> 
+      </div>
+    </div>
+  </div>
+</div>
+<div class="get-start">
+  <h2 class="title-2">Ready to watch? Enter your email to create or restart your membership.</h2>
+  <form class=" container-fluid" role="search">
+    <input class="email-btn me-4" type="email" placeholder="Email address" aria-label="Email">
+    <button class="btn btn-search" type="button">Get Started</button>
+  </form> 
+    </div>
+</div>
+</section>
+<!-------------------------------------------- Footer Section ------------------------------------------------->
+<section>
+  <div class="footer-section d-flex flex-column align-items-center justify-content-center">
+    <a href="#" class="navbar-brand "
+    > <br><img src="image/logo.png" alt="" class="LOGO"
+  /></a>
+  <p>
+
+    This Netflix clone is a personal project created for educational purposes only. <br> All rights to the original content, trademarks, and logos belong to Netflix, Inc.  
+  </p>
+  <div class="quick-links d-flex flex-row  ">
+    <ul>
+      <h1>Quick Links</h1>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Trending Movie</a> </li>
+      <li><a href="#">Questions</a></li>
+    </ul>
+    <ul>
+      <h1>Helps</h1>
+      <li><a href="#">FAQ</a></li>
+      <li><a href="#">Privcy</a></li>
+      <li><a href="#">Support</a> </li>
+      <li><a href="#">Career</a></li>
+    </ul>
+    <ul>
+      <h1>Contact Us</h1>
+      <li><a href="#">sign in</a></li>
+      <li><a href="#">netflix.com</a></li>
+      <li><a href="#">Media center</a> </li>
+      <li><a href="#">Account</a></li>
+    </ul> 
+  </div><hr>
+  <div class="icons-social  d-flex gap-3">
+  <i class="bi bi-instagram"></i>
+  <i class="bi bi-facebook"></i>
+  <i class="bi bi-linkedin"></i>
+  <i class="bi bi-twitter-x"></i>
+  <i class="bi bi-youtube"></i>
+  </div>
+  <p class="end">© 2025 Netflix Clone | Designed by Arzoo Muhammadi | For educational purposes only.</p>
+  </div>
+</section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
