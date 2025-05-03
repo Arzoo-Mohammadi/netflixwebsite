@@ -65,13 +65,12 @@ items.forEach((e) => {
 });
 // trending Section
 function changeBackground(imageUrl, text) {
-  document.getElementById(
-    "trending-section"
-  ).style.backgroundImage = `url('${imageUrl}')`;
-
+  document.getElementById("trending-section").style.backgroundImage = `url('${imageUrl}')`;
+  
   let textOverlay = document.getElementById("text-overlay");
-  textOverlay.innerHTML = `${text} <br> <button id="play-button">Play Now</button>`;
+  textOverlay.innerHTML = `${text} <br> <a href="#"><button id="play-button">Play Now</button></a>`;
 }
+
 // Pagination images
 const images = [
   "image/suggested/11.jpg",
