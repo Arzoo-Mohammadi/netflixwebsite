@@ -73,19 +73,20 @@ function changeBackground(imageUrl, text) {
 
 // Pagination images
 const images = [
-  "image/suggested/11.jpg",
-  "image/suggested/22.jpg",
-  "image/suggested/77.jpg",
-  "image/suggested/44.jpg",
-  "image/suggested/55.jpg",
-  "image/suggested/66.jpg",
-  "image/suggested/33.jpg",
-  "image/suggested/88.jpg",
-  "image/suggested/99.jpg",
-  "image/suggested/10.jpg",
-  "image/suggested/111.jpg",
-  "image/suggested/12.jpg",
+  "img/suggested/11.jpg",
+  "img/suggested/22.jpg",
+  "img/suggested/77.jpg",
+  "img/suggested/44.jpg",
+  "img/suggested/55.jpg",
+  "img/suggested/66.jpg",
+  "img/suggested/33.jpg",
+  "img/suggested/88.jpg",
+  "img/suggested/99.jpg",
+  "img/suggested/10.jpg",
+  "img/suggested/111.jpg",
+  "img/suggested/12.jpg",
 ];
+
 
 const imagesPerPage = 3;
 let currentPage = 1;
