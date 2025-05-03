@@ -66,7 +66,7 @@ items.forEach((e) => {
 // trending Section
 function changeBackground(imageUrl, text) {
   document.getElementById("trending-section").style.backgroundImage = `url('${imageUrl}')`;
-  
+
   let textOverlay = document.getElementById("text-overlay");
   textOverlay.innerHTML = `${text} <br> <a href="#"><button id="play-button">Play Now</button></a>`;
 }
